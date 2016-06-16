@@ -1,0 +1,98 @@
+.sapMLabel {
+	
+font-weight: bold !important;	
+text-transform: uppercase;
+color: #7f90a4 !important;
+
+}
+.sapMTB {
+    height: 8rem;
+    background: #edf1f5;
+    border-bottom: 0px solid #cccccc;
+    justify-content: flex-end;
+}
+
+.sapMShellGlobalOuterBackground {
+    background-color: #edf1f5!important;
+}
+.sapMIBar-CTX .sapMTitle {
+    font-size: 29px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #313440;
+    top: 20%;
+}
+.sapMListTbl th {
+    background: #edf1f5;
+}
+.sapMBar {
+    height: 4rem;
+}
+
+tr:nth-child(even) {
+    background: #edf1f5 !important;
+}
+tr:nth-child(odd) {
+    background: #f9fafc !important;
+}
+
+.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
+    width: 100% !important;
+    margin-left: 0px !important;
+    left: 0% !important;
+}
+/*.header{*/
+/*    font-weight:bold;*/
+/*}*/
+/*.sapMShellBG {*/
+    /*background-color: white;*/
+/*    background-image: url(images/download.jpg);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% 100%;*/
+/*}*/
+/*tr:nth-child(even) {*/
+/*    background: white !important;*/
+/*}*/
+/*tr:nth-child(odd) {*/
+/*    background: #e0e0e0 !important;*/
+/*}*/
+/*.sapMListTblCell .sapMListTblHeaderCell{*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.sap-desktop .sapMIBar.sapMHeader-CTX {*/
+/*    padding-top: 1%;*/
+/*    padding-bottom: 1%;*/
+    /*background-color : #FDB813;*/
+/*    filter: none;*/
+/*     font-weight: bold;*/
+    /*background-image: url(images/download.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+/*    background-color: #495256 !important;*/
+    
+/*}*/
+/*.sapMListBGTranslucent .sapMLIB {*/
+/*    background: #495256;*/
+  /* background-image: url(images/download.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+/*}*/
+/*.sapMListTbl {*/
+/*    font-size: 0.875rem;*/
+/*    padding-top: 2%;*/
+/*}*/
+/*.sapMTitle {*/
+/*    font-size: x-large;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.sapMListTbl .sapMText, .sapMListTbl .sapMLabel{*/
+/*	color:black;*/
+/*}*/
+/*.sapMListTbl th {*/
+/*    background:#7A90C1  !important;*/
+/*}*/
+/*.sapMIBar-CTX .sapMTitle {*/
+/*color:white;*/
+/*}*/
+/* Enter your custom styles here */

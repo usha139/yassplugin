@@ -1,0 +1,31 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" controllerName="com.sap.controller.Main">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+			<content>
+			    <Table  items="{/items}" columns="{/cols}"  id="__table0">
+			        <items>
+							<ColumnListItem counter="0" id="__item0">
+								<cells>
+									<Text maxLines="0" text="{Id}"/>
+									<Text maxLines="0" text="{CustomerName}"/>
+									<Text maxLines="0" text="{Status}"/>
+									<Text maxLines="0" text="{TotalPrice}"/>
+									<Text maxLines="0" text="{Currency}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column>
+								<header>
+									<Label text="{name}"/>
+								</header>
+							</Column>
+						</columns>
+			        
+			        </Table>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

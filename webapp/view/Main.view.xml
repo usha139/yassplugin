@@ -1,0 +1,65 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" controllerName="com.sap.controller.Main">
+	<App>
+		<pages>
+			<Page title="{/title}" id="page_yaas">
+			
+				<subHeader>
+					<Bar>
+						<contentLeft>
+							<SearchField search="handleSearch" width="100%"/>
+						</contentLeft>
+					</Bar>
+				</subHeader>
+				<content>
+			    <Table id="__table0" items="{/customers}">
+			        <items>
+							<ColumnListItem counter="0">
+								<cells>
+									<Text maxLines="0" text="{customerNumber}"/>
+									<Link ariaLabelledBy="__xmlview0--__label2 __link0" text="{customerNumber}" textAlign="Begin" id="__link0" press="handleNavigation"/>
+									<Text maxLines="0" text="{firstName}"/>
+									<sap.ui.comp.navpopover:SmartLink xmlns:sap.ui.comp.navpopover="sap.ui.comp.navpopover" ariaLabelledBy="__xmlview0--__label2 __xmlview0--__label3 __xmlview0--__label4" press="handleNavigation" text="{company}" semanticObject="Semantic Object" semanticObjectLabel="Semantic Object Label" id="__link1"/>
+									<Text maxLines="0" text="{contactPhone}"/>
+									<Text maxLines="0" text="{TotalPrice}"/>
+									<Text maxLines="0" text="{Currency}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+						<Column id="__column1">
+							<header>
+								<Label text="id" id="__label1"/>
+							</header>
+						</Column>
+						<Column id="__column2">
+							<header>
+								<Label text="Header 2" id="__label2"/>
+							</header>
+						</Column>
+						<Column id="__column3">
+							<header>
+								<Label text="Header 3" id="__label3"/>
+							</header>
+						</Column>
+						<Column id="__column4">
+							<header>
+								<Label text="Header 4" id="__label4"/>
+							</header>
+						</Column>
+						<Column id="__column5">
+							<header>
+								<Label text="Header 5" id="__label5"/>
+							</header>
+						</Column>
+						</columns>
+			        
+			     
+			        
+			        </Table>
+			</content>
+			<headerContent>
+			</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

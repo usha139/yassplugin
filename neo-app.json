@@ -1,0 +1,60 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "authenticationMethod": "none",
+  "headerWhiteList": ["Origin","Access-Control-Allow-Origin"],
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/token",
+      "target": {
+        "type": "destination",
+        "name": "oauth",
+        "entryPath": "/token"
+      },
+      "description": "oauth API"
+    },
+    {
+      "path": "/salesorders",
+      "target": {
+        "type": "destination",
+        "name": "orders",
+        "entryPath": "/salesorders"
+      },
+      "description": "orders API"
+    }
+  ],
+  "sendWelcomeFileRedirect": true,
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "*html"
+    },
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "sap-ui-cachebuster-info.json"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
+    }
+  ]
+}

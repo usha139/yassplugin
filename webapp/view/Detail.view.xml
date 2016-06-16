@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.sap.controller.Detail">
+	<App>
+		<pages>
+		    <Page title="Title">
+			<content>
+			    <Label text="Label" width="100%" id="__label0"/>
+			    <Text text="customerNumber" maxLines="0" id="__text0"/>
+			</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

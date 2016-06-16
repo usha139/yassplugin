@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema Namespace="ODataDemo" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+			<EntityType Name="customers">
+				<Property Name="customerNumber" Type="Edm.String"/>
+				<Property Name="title" Type="Edm.String"/>
+				<Property Name="firstName" Type="Edm.String"/>
+				<Property Name="middleName" Type="Edm.String"/>
+				<Property Name="lastName" Type="Edm.String"/>
+				<Property Name="active" Type="Edm.Boolean"/>
+				<Property Name="contactEmail" Type="Edm.String"/>
+				<Property Name="contactPhone" Type="Edm.String"/>
+				<Property Name="company" Type="Edm.String"/>
+				<Property Name="preferredLanguage" Type="Edm.String"/>
+				<Property Name="preferredCurrency" Type="Edm.String"/>
+				<Property Name="preferredSite" Type="Edm.String"/>
+				<NavigationProperty Name="accounts" Relationship="ODataDemo.customers_accounts_accounts_customers" FromRole="customers_accounts"
+					ToRole="accounts_customers"/>
+				<NavigationProperty Name="addresses" Relationship="ODataDemo.customers_addresses_addresses_customers" FromRole="customers_addresses"
+					ToRole="addresses_customers"/>
+			</EntityType>
+			<EntityType Name="me">
+				<Property Name="customerNumber" Type="Edm.String"/>
+				<Property Name="title" Type="Edm.String"/>
+				<Property Name="firstName" Type="Edm.String"/>
+				<Property Name="middleName" Type="Edm.String"/>
+				<Property Name="lastName" Type="Edm.String"/>
+				<Property Name="contactEmail" Type="Edm.String"/>
+				<Property Name="contactPhone" Type="Edm.String"/>
+				<Property Name="company" Type="Edm.String"/>
+				<Property Name="preferredLanguage" Type="Edm.String"/>
+				<Property Name="preferredCurrency" Type="Edm.String"/>
+				<Property Name="preferredSite" Type="Edm.String"/>
+				<NavigationProperty Name="accounts" Relationship="ODataDemo.me_accounts_accounts_me" FromRole="me_accounts" ToRole="accounts_me"/>
+				<NavigationProperty Name="addresses" Relationship="ODataDemo.me_addresses_addresses_me" FromRole="me_addresses" ToRole="addresses_me"/>
+			</EntityType>
+			<EntityType Name="loginconfig">
+				<Property Name="facebookAppId" Type="Edm.String"/>
+				<Property Name="googleClientId" Type="Edm.String"/>
+			</EntityType>
+			<EntityType Name="accounts">
+				<Property Name="providerId" Type="Edm.String"/>
+				<Property Name="id" Type="Edm.String"/>
+			</EntityType>
+			<Association Name="ODataDemo.customers_accounts_accounts_customers">
+				<End Role="customers_accounts" Type="ODataDemo.customers" Multiplicity="*"/>
+				<End Role="accounts_customers" Type="ODataDemo.accounts" Multiplicity="0..1"/>
+			</Association>
+			<EntityType Name="addresses">
+				<Property Name="id" Type="Edm.String"/>
+				<Property Name="contactName" Type="Edm.String"/>
+				<Property Name="companyName" Type="Edm.String"/>
+				<Property Name="street" Type="Edm.String"/>
+				<Property Name="streetNumber" Type="Edm.String"/>
+				<Property Name="streetAppendix" Type="Edm.String"/>
+				<Property Name="extraLine1" Type="Edm.String"/>
+				<Property Name="extraLine2" Type="Edm.String"/>
+				<Property Name="extraLine3" Type="Edm.String"/>
+				<Property Name="extraLine4" Type="Edm.String"/>
+				<Property Name="zipCode" Type="Edm.String"/>
+				<Property Name="city" Type="Edm.String"/>
+				<Property Name="country" Type="Edm.String"/>
+				<Property Name="state" Type="Edm.String"/>
+				<Property Name="contactPhone" Type="Edm.String"/>
+				<Property Name="isDefault" Type="Edm.Boolean"/>
+			</EntityType>
+			<Association Name="ODataDemo.customers_addresses_addresses_customers">
+				<End Role="customers_addresses" Type="ODataDemo.customers" Multiplicity="*"/>
+				<End Role="addresses_customers" Type="ODataDemo.addresses" Multiplicity="0..1"/>
+			</Association>
+			<Association Name="ODataDemo.me_accounts_accounts_me">
+				<End Role="me_accounts" Type="ODataDemo.me" Multiplicity="*"/>
+				<End Role="accounts_me" Type="ODataDemo.accounts" Multiplicity="0..1"/>
+			</Association>
+			<Association Name="ODataDemo.me_addresses_addresses_me">
+				<End Role="me_addresses" Type="ODataDemo.me" Multiplicity="*"/>
+				<End Role="addresses_me" Type="ODataDemo.addresses" Multiplicity="0..1"/>
+			</Association>
+			<EntityContainer Name="DemoService" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="customers" EntityType="ODataDemo.customers"/>
+				<EntitySet Name="me" EntityType="ODataDemo.me"/>
+				<EntitySet Name="loginconfig" EntityType="ODataDemo.loginconfig"/>
+				<EntitySet Name="accounts" EntityType="ODataDemo.accounts"/>
+				<EntitySet Name="addresses" EntityType="ODataDemo.addresses"/>
+				<AssociationSet Name="customers_accounts_accounts" Association="ODataDemo.customers_accounts_accounts_customers">
+					<End Role="customers_accounts" EntitySet="customers"/>
+					<End Role="accounts_customers" EntitySet="accounts"/>
+				</AssociationSet>
+				<AssociationSet Name="customers_addresses_addresses" Association="ODataDemo.customers_addresses_addresses_customers">
+					<End Role="customers_addresses" EntitySet="customers"/>
+					<End Role="addresses_customers" EntitySet="addresses"/>
+				</AssociationSet>
+				<AssociationSet Name="me_accounts_accounts" Association="ODataDemo.me_accounts_accounts_me">
+					<End Role="me_accounts" EntitySet="me"/>
+					<End Role="accounts_me" EntitySet="accounts"/>
+				</AssociationSet>
+				<AssociationSet Name="me_addresses_addresses" Association="ODataDemo.me_addresses_addresses_me">
+					<End Role="me_addresses" EntitySet="me"/>
+					<End Role="addresses_me" EntitySet="addresses"/>
+				</AssociationSet>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

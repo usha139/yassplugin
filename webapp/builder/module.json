@@ -1,0 +1,12 @@
+{
+    "widgets": [
+        {
+            "id": "homeWidget",
+            "title": "analytics_valuation",
+            "settings": {
+                "viewUrl": "index.html",
+                "example_setting": "some value"
+            }
+        }
+    ]
+}
